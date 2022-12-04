@@ -1,1 +1,1 @@
-https://github.com/KyanoBoi/Eindwerk_GIP/gip_website/Home.html
+https://github.com/KyanoBoi/Eindwerk_GIP/Gip_website/Home.html
