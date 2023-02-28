@@ -58,45 +58,63 @@
         <!--This part above is the nav-->
         <!--Add content below-->
 
-<div class="container">
-            <div class="row justify-content-center mt-5">
-              <div class="col-sm-8 text-center">
-                <div class="form-group">
-                  <textarea class="form-control" id="messageInput" rows="8" placeholder="Enter your message here"></textarea>
+       <div class="container">
+            <div class="row justify-content-center align-items-center mt-5">
+                <div class="col-sm-8 text-center">
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <textarea class="form-control" id="messageInput" rows="8"
+                                placeholder="Enter your message here"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="imageInput">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
-                <button class="btn btn-primary" onclick="sendMessage()">Send Message</button>
-              </div>
             </div>
-          </div>
-          
+        </div>
+
+
         <script>
-        function sendMessage() {
-          const webhookUrl = 'https://discord.com/api/webhooks/1080208881717878906/S3pmtQaWKJwbfYQlHlVd-uRTOfNPlJf0zaxs-1OxzkDUCagycCNoH2TkGB8gf6WfpKr_';
-          
-          const messageInput = document.getElementById('messageInput');
-          const messageContent = messageInput.value.trim();
-          if (messageContent === '') {
-            alert('Please enter a message');
-            return;
-          }
-        
-          const data = {content: messageContent};
-        
-          fetch(webhookUrl, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data),
-          })
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Failed to send message');
+            function sendMessage(event) {
+                event.preventDefault();
+
+                const webhookUrl = 'https://discord.com/api/webhooks/1080208881717878906/S3pmtQaWKJwbfYQlHlVd-uRTOfNPlJf0zaxs-1OxzkDUCagycCNoH2TkGB8gf6WfpKr_';
+
+                const messageInput = document.getElementById('messageInput');
+                const messageContent = messageInput.value.trim();
+                if (messageContent === '') {
+                    alert('Please enter a message');
+                    return;
+                }
+
+                const imageInput = document.getElementById('imageInput');
+                const imageData = imageInput.files[0];
+
+                const formData = new FormData();
+                formData.append('content', messageContent);
+                formData.append('file', imageData);
+
+                fetch(webhookUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to send message');
+                        }
+                        alert('Message sent!');
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        alert('Failed to send message');
+                    });
             }
-          })
-          .catch(error => {
-            console.error(error);
-            alert('Failed to send message');
-          });
-        }
+
+            const messageForm = document.getElementById('messageForm');
+            messageForm.addEventListener('submit', sendMessage);
+
         </script>
 
         <!--This part below is the footer-->
