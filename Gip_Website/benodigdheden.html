@@ -58,13 +58,21 @@
         <!--This part above is the nav-->
         <!--Add content below-->
 
-        <button onclick="sendMessage()">Send Message</button>
+<textarea id="messageInput" rows="4" cols="50"></textarea>
+<button onclick="sendMessage()">Send Message</button>
 
 <script>
 function sendMessage() {
   const webhookUrl = 'https://discord.com/api/webhooks/1080208881717878906/S3pmtQaWKJwbfYQlHlVd-uRTOfNPlJf0zaxs-1OxzkDUCagycCNoH2TkGB8gf6WfpKr_';
   
-  const data = {content: '@everyone coureur is gay'};
+  const messageInput = document.getElementById('messageInput');
+  const messageContent = messageInput.value.trim();
+  if (messageContent === '') {
+    alert('Please enter a message');
+    return;
+  }
+
+  const data = {content: messageContent};
 
   fetch(webhookUrl, {
     method: 'POST',
@@ -75,11 +83,11 @@ function sendMessage() {
     if (!response.ok) {
       throw new Error('Failed to send message');
     }
-    
+    alert('Message sent!');
   })
   .catch(error => {
     console.error(error);
-    
+    alert('Failed to send message');
   });
 }
 </script>
