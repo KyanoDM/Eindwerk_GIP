@@ -58,39 +58,46 @@
         <!--This part above is the nav-->
         <!--Add content below-->
 
-<textarea id="messageInput" rows="4" cols="50"></textarea>
-<button onclick="sendMessage()">Send Message</button>
-
-<script>
-function sendMessage() {
-  const webhookUrl = 'https://discord.com/api/webhooks/1080208881717878906/S3pmtQaWKJwbfYQlHlVd-uRTOfNPlJf0zaxs-1OxzkDUCagycCNoH2TkGB8gf6WfpKr_';
-  
-  const messageInput = document.getElementById('messageInput');
-  const messageContent = messageInput.value.trim();
-  if (messageContent === '') {
-    alert('Please enter a message');
-    return;
-  }
-
-  const data = {content: messageContent};
-
-  fetch(webhookUrl, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(data),
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Failed to send message');
-    }
-    alert('Message sent!');
-  })
-  .catch(error => {
-    console.error(error);
-    alert('Failed to send message');
-  });
-}
-</script>
+<div class="container">
+            <div class="row justify-content-center mt-5">
+              <div class="col-sm-8 text-center">
+                <div class="form-group">
+                  <textarea class="form-control" id="messageInput" rows="8" placeholder="Enter your message here"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="sendMessage()">Send Message</button>
+              </div>
+            </div>
+          </div>
+          
+        <script>
+        function sendMessage() {
+          const webhookUrl = 'https://discord.com/api/webhooks/1080208881717878906/S3pmtQaWKJwbfYQlHlVd-uRTOfNPlJf0zaxs-1OxzkDUCagycCNoH2TkGB8gf6WfpKr_';
+          
+          const messageInput = document.getElementById('messageInput');
+          const messageContent = messageInput.value.trim();
+          if (messageContent === '') {
+            alert('Please enter a message');
+            return;
+          }
+        
+          const data = {content: messageContent};
+        
+          fetch(webhookUrl, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data),
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to send message');
+            }
+          })
+          .catch(error => {
+            console.error(error);
+            alert('Failed to send message');
+          });
+        }
+        </script>
 
         <!--This part below is the footer-->
         <div class="row footer justify-content-around">
