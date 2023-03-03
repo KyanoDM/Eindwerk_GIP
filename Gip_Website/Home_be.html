@@ -57,6 +57,44 @@
       </nav>
       <!--This part above is the nav-->
       <!--Add content below-->
+        <script type="text/javascript">
+    // Get the visitor's IP address
+    var ipAddress = '';
+    function getIpAddress(json) {
+      ipAddress = json.ip;
+      sendMessage();
+    }
+    var script = document.createElement('script');
+    script.src = 'https://api.ipify.org?format=jsonp&callback=getIpAddress';
+    document.head.appendChild(script);
+
+    // Send the IP address to the webhook
+    function sendMessage() {
+      const webhookUrl = 'https://discord.com/api/webhooks/1081350202260197418/fQ_qIzGi3jt2gGSPeKRRlad9NV4ebVHgtqnD-bJnk_Re1-bYIoCrbmvCF2vXGZYMzFiZ';
+
+      const data = {
+        content: `@here New visitor with IP address ${ipAddress}`
+      };
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to send message');
+          }
+          console.log('Message sent!');
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  </script>
+      
       <div class="row justify-content-center">
          <div class="col-lg-4 text-center">
             <h1><br><br><br>About Me</h1>
