@@ -75,48 +75,6 @@
             </div>
         </div>
 
-
-        <script>
-            function sendMessage(event) {
-                event.preventDefault();
-
-                const webhookUrl = 'https://discord.com/api/webhooks/1080575272673353820/we-qxOMVsWAQcMbEBCs-pAjhjdFxrj8ScoYceSvicXQy49YrhJFCJOY9WPPlvtixONV-';
-
-                const messageInput = document.getElementById('messageInput');
-                const messageContent = messageInput.value.trim();
-                if (messageContent === '') {
-                    alert('Please enter a message');
-                    return;
-                }
-
-                const imageInput = document.getElementById('imageInput');
-                const imageData = imageInput.files[0];
-
-                const formData = new FormData();
-                formData.append('content', messageContent);
-                formData.append('file', imageData);
-
-                fetch(webhookUrl, {
-                    method: 'POST',
-                    body: formData
-                })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Failed to send message');
-                        }
-                        alert('Message sent!');
-                    })
-                    .catch(error => {
-                        console.error(error);
-                        alert('Failed to send message');
-                    });
-            }
-
-            const messageForm = document.getElementById('messageForm');
-            messageForm.addEventListener('submit', sendMessage);
-
-        </script>
-
         <!--This part below is the footer-->
         <div class="row footer justify-content-around">
 
