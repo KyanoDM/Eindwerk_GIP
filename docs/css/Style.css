@@ -1,0 +1,641 @@
+.Logo {
+  height: 50px;
+  width: 50px;
+}
+.store:hover {
+  color: #158cba;
+  text-decoration: underline;
+}
+
+.giptitel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+
+.enlarge {
+  padding: 50px;
+  
+  transition: transform .2s; /* Animation */
+  width: 500px;
+  height: 700px;
+  margin: 0 auto;
+}
+.enlarge:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/*change the number below to scale to the appropriate size*/
+.thumbnail:hover {
+  transform: scale(3);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 1795px) {
+  .gipkaarttext {
+    margin-left: 50px;
+  }
+}
+
+.test {
+  justify-content: center;
+}
+
+.ppimg {
+  width: 900px;
+}
+
+#carousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+#carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+
+.gipkaart {
+  position: relative;
+  top: 50px;
+  height: 150px;
+  background-color: #158cba;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  margin-left: 9vw;
+}
+
+@media (max-width: 925px) {
+  .gipkaart {
+    height: 200px;
+  }
+}
+
+.GipIcon {
+  height: 120px;
+  margin-top: 15px;
+}
+
+.vlog {
+  width: 600px;
+}
+
+.con {
+  display: table;
+}
+
+.conc {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+html,
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  overflow-x: hidden;
+  margin: auto 0;
+}
+
+.wSearch {
+  width: 500px;
+}
+
+.doc {
+  height: 2000px;
+}
+
+.copyr {
+  height: 110px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.guidekaartvak {
+  width: 100%;
+  height: 400px;
+  background-color: red;
+}
+
+.Guide {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+}
+
+.rasp {
+  height: 200px;
+}
+
+.H-4 {
+  margin-left: 34.2%;
+  margin-top: 50px;
+}
+
+.test {
+  display: flex;
+  align-items: center;
+  /* This centers the items vertically within the container */
+  justify-content: center;
+  /* This centers the items horizontally within the container */
+}
+
+.taal {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  top: -145px;
+  text-transform: none;
+}
+
+.taalbut {
+  width: 100px;
+  margin-left: 5px;
+  height: 60px;
+  transform: translateY(159px) translateX(-140px);
+
+}
+
+.temp {
+  height: 1500px;
+  background-color: white;
+}
+
+img.taal {
+  width: 50px;
+  height: 50px;
+
+}
+
+.container {
+  overflow: hidden;
+  margin-left: 50px;
+  margin-bottom: -40px;
+}
+
+.title {
+  height: 50px;
+  background-color: black;
+  text-align: left;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  margin-left: -25px;
+}
+
+
+
+@media (max-width: 400px) {
+  .title {
+    margin-left: -15px;
+    margin-bottom: 20px;
+
+  }
+
+  .taalbut {
+    transform: translateY(159px) translateX(-100px);
+  }
+
+  .title2 {
+    margin-left: 150px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  .title {
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.home {
+  height: 100%;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  min-height: 500px;
+}
+
+.div-element {
+  height: 200px;
+}
+
+.foot {
+  height: 100%;
+}
+
+.pfp {
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 0% 50%;
+  margin-top: 80px;
+}
+
+.soclink {
+  color: white;
+  text-decoration: none;
+}
+
+.SocialMargin {
+  margin-left: -30px;
+}
+
+.footerText {
+  text-align: center;
+}
+
+.space {
+  background-color: red;
+
+}
+
+.fnaveng {
+  left: 35px;
+  position: relative;
+}
+
+.white {
+  height: 100px;
+}
+
+.height {
+  height: 500px;
+}
+
+.fnav2 {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  top: 30px;
+  left: -50px
+}
+
+.fnav {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  top: 30px;
+}
+
+.fnav ul {
+  list-style-type: none;
+}
+
+.fnav2 ul {
+  list-style-type: none;
+}
+
+.social {
+  position: relative;
+  top: 0px;
+}
+
+.homeText {
+  height: 400px;
+}
+
+.streep-v {
+  height: 410px;
+  width: 1px;
+  background-color: white;
+  margin: 0;
+  top: 50%;
+
+  transform: translateY(10%);
+}
+
+.logo-foot {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  margin: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(30%);
+
+}
+
+.streep {
+  background-color: rgb(21, 140, 186);
+  height: 1px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 100px;
+}
+
+.streep2 {
+  background-color: white;
+  height: 1px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.higher-up {
+
+  line-height: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.projects {
+  text-align: center;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  display: flex;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+.giptekst {
+  height: 500px;
+  background-color: white;
+  display: flex;
+  display: grid;
+  place-items: center;
+}
+
+.wrapTaal {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 2185px) {
+  .homeText {
+    height: 100%;
+  }
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .weer {
+    height: 60%;
+    margin-top: -150px;
+  }
+}
+
+.kaart {
+  min-height: 350px;
+  background-color: #158cba;
+  border-radius: 15px;
+  max-width: 384px;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.kaarten {
+  color: white;
+  width: 100%;
+
+}
+
+@media only screen and (max-width: 992px) {
+  .kaart {
+    margin-top: 30px;
+    margin-left: 9.5%;
+
+  }
+}
+
+.labs {
+  display: inline-block;
+  width: 100px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+
+.bencard {
+  width: 200px;
+  height: 300px;
+  background-color: rgb(21, 140, 186);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.benim {
+  width: 180px;
+  margin-left: -10px;
+  margin-top: 10px;
+}
+.inben {
+  line-height: -10px;
+  text-align: center;
+  margin-top: 30px;
+  width: 201px;
+  height: 180px;
+  margin-left: -19px;
+  background-color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: white;
+}
+.ininben {
+  text-align: left;
+  line-height: 150px;
+}
+.bag {
+  width:30px;
+  margin-left: 0px;
+  float: right;
+  margin-top: 60px;
+}
+.bencard:hover .benim {
+  transform: translateY(-40px);
+}
+.bencard:hover .benim2 {
+  transform: translateY(-40px);
+}
+.benim2 {
+  transition: transform 0.6s ease;
+}
+
+.benim {
+  transition: transform 0.6s ease;
+}
+.bag:hover {
+  transform: scale(1.2);
+}
+
+.bag {
+  transition: transform 0.3s ease;
+}
+.bencard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bencard {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.parts {
+  height: 500px;
+}
+.part1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.part1:hover {
+  transform:  translateY(-10px);
+}
+
